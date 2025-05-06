@@ -33,7 +33,7 @@
     }
   }
 ?> -->
-<?php
+<!-- <?php
 // file I/O
 /*
 opening a file
@@ -65,8 +65,12 @@ fclose($file);
 echo $content;
 
 
-?>
+?> -->
+<?php
+// cookies
+setcookie("name","ahzam",time()+3600);
 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
