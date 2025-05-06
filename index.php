@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 
 // file include
   if(isset($_POST['submit'])){
@@ -32,7 +32,41 @@
       print_r($error);
     }
   }
+?> -->
+<?php
+// file I/O
+/*
+opening a file
+reading a file
+writing a file
+closing a file
+*/
+
+// Opening files
+$filename = "docs/content.txt";
+$file = fopen($filename,'w');
+if ($file == false){
+  echo "There is some error in file opening!";
+}
+$filecontent ="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam totam iure ut molestias mollitia enim, sequi cumque illo placeat minus voluptatem tempore esse beatae unde itaque nostrum quasi, reprehenderit facere!
+";
+fwrite($file, $filecontent);
+fclose($file);
+
+// Reading files
+$filename = "docs/content.txt";
+$file = fopen($filename,'r');
+
+$fileSize = filesize($filename);
+//echo $fileSize. 'Bytes';
+$content = fread($file,$fileSize);
+fclose($file);
+
+echo $content;
+
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -50,9 +84,9 @@
   include "footer.php";
   ?> -->
 
-  <form method="POST" action="" enctype="multipart/form-data">
+  <!-- <form method="POST" action="" enctype="multipart/form-data">
     <input type="file" name="filename" />
     <input type="submit" name ="submit" value="SUBMIT"/>
-  </form>
+  </form> -->
 </body>
 </html>
