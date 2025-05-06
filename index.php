@@ -70,6 +70,23 @@ echo $content;
 // cookies
 setcookie("name","ahzam",time()+3600);
 
+// set cookie
+if(isset($_COOKIE["name"])){
+  echo "Hello, " . $_COOKIE['name'];
+}
+
+// delete cookie
+setcookie("name","ahzam",time()-3600);
+
+// set cookie array
+setcookie("cookie[one]","Cookie One");
+setcookie("cookie[two]","Cookie Two");
+setcookie("cookie[three]","Cookie Three");
+
+if(isset($_COOKIE['cookie'])){
+  echo "<pre>";
+  print_r($_COOKIE['cookie']);
+}
 ?>
 
 <!DOCTYPE html>
