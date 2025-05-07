@@ -7,7 +7,7 @@
 </head>
 <body>
     <center>
-        <form method="post" action= "cookieuser.php" > 
+        <form method="post" action= "session.php" > 
             <table border = "1">
                 <tr>
                     <th>User Name</th>
