@@ -66,7 +66,9 @@ echo $content;
 
 
 ?> -->
-<?php
+
+
+<!-- <?php
 // cookies
 setcookie("name","ahzam",time()+3600);
 
@@ -87,7 +89,7 @@ if(isset($_COOKIE['cookie'])){
   echo "<pre>";
   print_r($_COOKIE['cookie']);
 }
-?>
+?> -->
 
 <!DOCTYPE html>
 <html lang="en">
